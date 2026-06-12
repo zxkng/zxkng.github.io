@@ -1,0 +1,280 @@
+/* =========================================================================
+   康泽煊 | Zexuan Kang — personal site
+   Style: LaTeX-flavoured, clean & airy. Palette: black / white / light blue.
+   ========================================================================= */
+
+:root {
+  /* Palette */
+  --bg:          #ffffff;
+  --text:        #1a1a1a;
+  --muted:       #6b7280;
+  --accent:      #2563eb;   /* light blue */
+  --accent-dark: #1d4ed8;
+  --accent-soft: #eff6ff;   /* blue tint for backgrounds */
+  --rule:        #e5e7eb;
+  --rule-strong: #111827;
+  --code-bg:     #f6f8fa;
+  --code-border: #eaecef;
+
+  /* Typography */
+  --serif: "CMU Serif", "Source Serif 4", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --mono:  "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --measure: 720px;
+}
+
+/* ----------------------------------------------------------------- Reset */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.72;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------- Layout */
+.content {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 3.2rem 1.4rem 1rem;
+}
+
+/* --------------------------------------------------------------- Header */
+.site-header {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.6rem 1.4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .6rem 1.2rem;
+}
+.site-brand {
+  font-weight: 600;
+  font-size: 1.12rem;
+  letter-spacing: .01em;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-nav { display: flex; gap: 1.3rem; flex-wrap: wrap; }
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .98rem;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.site-nav a:hover { color: var(--text); }
+.site-nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------------------------------------------------------- Typography */
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 2rem; margin: 0 0 .4rem; letter-spacing: .01em; }
+h2 {
+  font-size: 1.35rem;
+  margin: 2.4rem 0 1rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1.12rem; margin: 1.6rem 0 .6rem; }
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 2px; }
+
+strong { font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.4rem 0; }
+
+ul, ol { padding-left: 1.3rem; margin: 0 0 1rem; }
+li { margin: .25rem 0; }
+li::marker { color: var(--muted); }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: .2rem 0 .2rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  background: var(--accent-soft);
+  border-radius: 0 4px 4px 0;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------- Code */
+code {
+  font-family: var(--mono);
+  font-size: .86em;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 4px;
+  padding: .1em .35em;
+}
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  padding: .9rem 1.1rem;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+pre code { background: none; border: 0; padding: 0; font-size: .82rem; }
+
+/* -------------------------------------------------------------- Tables */
+/* booktabs-style horizontal rules, like a LaTeX table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+  font-size: .96rem;
+}
+th, td { padding: .5rem .6rem; text-align: left; vertical-align: top; }
+thead th { border-bottom: 2px solid var(--rule-strong); }
+tbody tr { border-bottom: 1px solid var(--rule); }
+tbody tr:last-child { border-bottom: 2px solid var(--rule-strong); }
+
+img { max-width: 100%; height: auto; }
+
+/* ====================================================== HOME / PROFILE */
+.profile { padding-top: .5rem; }
+.profile-name { font-size: 2.3rem; margin-bottom: .15rem; text-align: center; }
+.profile-name .en { color: var(--muted); font-weight: 400; font-size: .62em; }
+.profile-tagline {
+  text-align: center;
+  color: var(--accent);
+  margin: 0 0 .4rem;
+  font-size: 1.05rem;
+}
+.profile-contact {
+  text-align: center;
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 1.6rem;
+}
+.profile-contact a { color: var(--muted); }
+.profile-contact a:hover { color: var(--accent); }
+.profile-contact .sep { margin: 0 .5rem; opacity: .5; }
+
+.lang-pair { margin-bottom: 1.1rem; }
+.lang-pair .en { color: var(--muted); font-size: .95rem; }
+
+/* Home quick links to the four sections */
+.home-cards {
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.home-cards a {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.home-cards a:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 14px rgba(37, 99, 235, .08);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.home-cards .card-title { font-weight: 600; display: block; margin-bottom: .15rem; }
+.home-cards .card-desc { color: var(--muted); font-size: .9rem; }
+
+/* ============================================================= CV page */
+.cv-entry { margin-bottom: 1.4rem; }
+.cv-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.cv-entry-head .role { font-weight: 600; }
+.cv-entry-head .date { color: var(--muted); font-size: .92rem; white-space: nowrap; }
+.cv-entry .sub { color: var(--muted); font-style: italic; margin: .05rem 0 .4rem; }
+.cv-entry ul { margin-top: .3rem; }
+.cv-entry .en { color: var(--muted); font-size: .93rem; }
+
+.skill-row { margin: .35rem 0; }
+.skill-row .label { font-weight: 600; }
+.badge {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  padding: .12rem .6rem;
+  font-size: .82rem;
+  margin: .15rem .25rem .15rem 0;
+}
+.cv-download { margin: 1rem 0 0; }
+.cv-download a {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: .35rem .9rem;
+  font-size: .92rem;
+  margin: .2rem .4rem .2rem 0;
+}
+.cv-download a:hover { background: var(--accent-soft); text-decoration: none; }
+
+/* ========================================================== Notes list */
+.note-list { list-style: none; padding: 0; margin: 1.4rem 0 0; }
+.note-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.note-list a { font-size: 1.05rem; }
+.note-list .when { color: var(--muted); font-size: .88rem; white-space: nowrap; }
+.note-list .note-cat-label { color: var(--accent); font-size: .8rem; margin-left: .5rem; }
+
+/* Single note */
+.note-header { margin-bottom: 1.6rem; }
+.note-title { font-size: 1.9rem; text-align: left; }
+.note-meta { color: var(--muted); font-size: .9rem; margin-top: .2rem; }
+.note-meta .sep { margin: 0 .4rem; opacity: .5; }
+.note-meta .tag { color: var(--accent); margin-right: .35rem; }
+.note-foot { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .95rem; }
+
+/* ============================================================= Footer */
+.site-footer {
+  max-width: var(--measure);
+  margin: 3rem auto 0;
+  padding: 1.4rem 1.4rem 2.4rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--muted);
+  font-size: .88rem;
+}
+.site-footer .footer-links a { color: var(--muted); }
+.site-footer .footer-links a:hover { color: var(--accent); }
+.site-footer .sep { margin: 0 .5rem; opacity: .5; }
+.footer-copy { margin: .5rem 0 0; opacity: .8; }
+
+/* ============================================================= KaTeX */
+.katex { font-size: 1.04em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: .3rem 0; }
+
+/* ======================================================== Responsive */
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .content { padding-top: 2rem; }
+  .home-cards { grid-template-columns: 1fr; }
+  .profile-name { font-size: 1.9rem; }
+  .site-header { justify-content: center; text-align: center; }
+}

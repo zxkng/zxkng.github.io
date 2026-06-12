@@ -1,0 +1,24 @@
+---
+layout: default
+title: 项目 Projects
+permalink: /projects/
+---
+<h1>项目 <span style="color:var(--muted);font-weight:400;font-size:.6em">Projects</span></h1>
+
+<p>科研项目与竞赛作品。代码与更多细节见我的 <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>。</p>
+<p class="en">Selected research and competition projects. Code and details on my <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>.</p>
+
+<h2>ADSS：有向图上含靶向图的最密子图</h2>
+<p class="note-meta" style="margin-bottom:.6rem">2024.09 – 2025.01 · 图算法 / 最优化 · Frank–Wolfe</p>
+<p>在保证子图包含预定关键结构（anchor）的前提下，寻找平均边密度最高的子图。从线性规划模型推导动态规划形式，采用 Frank–Wolfe 算法在结构约束下迭代求解，并构建质量评估框架在真实有向图数据上验证有效性与效率。</p>
+<p class="en">Finds the maximum-density subgraph that must contain a predefined anchor structure. A DP formulation is derived from the LP model and solved with the Frank–Wolfe algorithm under structural constraints, evaluated on real directed-graph data.</p>
+
+<h2>二分图近似最大团（Defective-Clique）</h2>
+<p class="note-meta" style="margin-bottom:.6rem">2023.09 – 2024.05 · 图算法 / 网络聚类</p>
+<p>研究二分图中的 defective-clique 问题，独立实现并优化求解算法，采用 alpha-beta core 缩图与 ordering 技术，将运行时间降低约 10%，为缺陷团在二分图中的应用提供了实践经验。</p>
+<p class="en">Studies the defective-clique problem in bipartite graphs; an independent solver optimized with alpha-beta core compression and ordering reduces computation time by ~10%.</p>
+
+<h2>北京移动客户体验分析（MathorCup）</h2>
+<p class="note-meta" style="margin-bottom:.6rem">2023.01 · 数据建模 · XGBoost</p>
+<p>证明标准化数据上 Pearson 相关系数与欧氏距离的理论等价性，量化 50+ 网络质量变量与用户满意度的关系并锁定前五大驱动因素；构建并调优带特征交叉与正则化的 XGBoost 模型，在潜客评分集上达到 85% 的预测准确率。</p>
+<p class="en">Proved the equivalence of Pearson correlation and Euclidean distance on standardized data; built and tuned an XGBoost model (feature crossing + regularization) reaching 85% prediction accuracy.</p>

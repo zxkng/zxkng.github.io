@@ -1,0 +1,57 @@
+title: 康泽煊 | Zexuan Kang
+tagline: 大数据与数据科学 · 算法与机器学习
+description: 康泽煊 (Zexuan Kang) 的个人主页 —— 简历、研究项目与学习笔记。
+lang: zh-CN
+
+url: "https://fishxua.github.io"
+baseurl: ""
+
+author:
+  name: 康泽煊 (Zexuan Kang)
+  email: 122090234@link.cuhk.edu.cn
+  github: fishxua
+
+# --- Build settings ---
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # Inline/display math written with $...$ / $$...$$ is rendered client-side
+  # by KaTeX (see assets/js/math.js). kramdown turns $$...$$ into
+  # <script type="math/tex"> tags, which the script also picks up.
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+
+# --- Navigation order (label + url) ---
+nav:
+  - title: 首页 Home
+    url: /
+  - title: 简历 CV
+    url: /cv/
+  - title: 项目 Projects
+    url: /projects/
+  - title: 笔记 Notes
+    url: /notes/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - "康泽煊-中文简历-20260302(1).pdf"
+  - "122090234_portfolio.pdf"

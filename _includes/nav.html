@@ -1,0 +1,15 @@
+<header class="site-header">
+  <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+  <nav class="site-nav">
+    {%- assign cur = page.url -%}
+    {%- for item in site.nav -%}
+      {%- assign item_url = item.url | relative_url -%}
+      {%- if item.url == "/" -%}
+        {%- if cur == "/" -%}{% assign active = true %}{%- else -%}{% assign active = false %}{%- endif -%}
+      {%- else -%}
+        {%- if cur contains item.url -%}{% assign active = true %}{%- else -%}{% assign active = false %}{%- endif -%}
+      {%- endif -%}
+      <a href="{{ item_url }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+    {%- endfor -%}
+  </nav>
+</header>

@@ -1,0 +1,111 @@
+---
+layout: default
+title: 简历 CV
+permalink: /cv/
+---
+<h1>简历 <span style="color:var(--muted);font-weight:400;font-size:.6em">Curriculum Vitae</span></h1>
+
+<p class="profile-contact" style="text-align:left;margin:.2rem 0 1rem">
+  <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+  <span class="sep">·</span> +86 134-5632-8297
+  <span class="sep">·</span>
+  <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">github.com/{{ site.author.github }}</a>
+</p>
+
+<div class="cv-download">
+  <a href="{{ '/assets/pdf/康泽煊-中文简历.pdf' | relative_url }}" target="_blank" rel="noopener">下载中文简历 (PDF)</a>
+  <a href="{{ '/assets/pdf/Zexuan-Kang-Portfolio.pdf' | relative_url }}" target="_blank" rel="noopener">Download English CV (PDF)</a>
+</div>
+
+<h2>教育背景 · Education</h2>
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">香港中文大学（深圳）The Chinese University of Hong Kong, Shenzhen</span>
+    <span class="date">2022.09 – 2026.06（预计 Expected）</span>
+  </div>
+  <p class="sub">理学学士 · 大数据与数据科学 | B.S. in Data Science &amp; Big Data Technology · GPA 3.4 / 4.0</p>
+  <p><strong>核心课程：</strong>数据科学、数据结构、最优化、机器学习、算法设计与分析、云计算、量子计算与量子信息、编码理论、微积分、线性代数、概率论、随机过程、随机模拟、投资分析与资产配置。</p>
+  <p class="en"><strong>Core coursework:</strong> Data Science, Data Structures, Optimization, Machine Learning, Design &amp; Analysis of Algorithms, Cloud Computing, Quantum Computation, Coding Theory, Calculus, Linear Algebra, Probability, Stochastic Processes, Stochastic Simulation, Investment Analysis.</p>
+</div>
+
+<h2>实习经历 · Work Experience</h2>
+
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">理想汽车 Li Auto Inc. — 算法工程师实习生 / Algorithm Engineer Intern</span>
+    <span class="date">2025.06 – 2025.09</span>
+  </div>
+  <ul>
+    <li>开发基于大语言模型（LLM）的生产力工具，自动化内部汽车软件开发的代码生成，显著提升垂直领域研发效率。</li>
+    <li>独立完成领域代码需求分析，将 LLM 与汽车软件 API 集成，实现代码输出准确率 95%，并部署于内部 GPU 集群。</li>
+    <li>跨研发团队协调数据标注与敏捷开发，撰写技术文档并主持研讨与培训，推动工程部门负责任地采用 LLM 应用。</li>
+    <li class="en">Built LLM-powered tools to automate code generation for in-house automotive software; integrated LLMs with internal APIs reaching 95% output accuracy and deployed on internal GPU clusters; authored docs and led training to drive adoption.</li>
+  </ul>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">上海宝述科技 Shanghai Baoshu Tech — 产品研发实习生 / Product R&amp;D Intern</span>
+    <span class="date">2023.05 – 2023.08</span>
+  </div>
+  <ul>
+    <li>参与公司级机器人研发项目，完成智能教学机器人的动作编写与展示流程设计，保障其落地应用。</li>
+    <li>为“华龙一号”（核电机组）专有语料库承担数据标注与算法测试，使用 TensorFlow / PyTorch 引入深度学习并显著提升模型效果。</li>
+    <li class="en">Programmed intelligent-teaching-robot movements and designed demo workflow; built a proprietary corpus for a nuclear power unit, doing data annotation and algorithm testing with TensorFlow/PyTorch for notable accuracy gains.</li>
+  </ul>
+</div>
+
+<h2>科研经历 · Research</h2>
+
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">有向图上含靶向图的最密子图问题（ADSS）/ Anchored Densest Subgraph on Directed Graphs</span>
+    <span class="date">2024.09 – 2025.01</span>
+  </div>
+  <ul>
+    <li>发现传统最密子图问题常忽略先验关键结构，提出在保证子图包含预定结构的同时最大化平均边密度的 ADSS 问题。</li>
+    <li>从线性规划推导出动态规划形式，采用 Frank–Wolfe 算法在结构约束下求解，并开发质量评估框架在真实有向图上验证。</li>
+    <li class="en">Formulated ADSS to maximize density while containing a predefined target subgraph; derived a DP from the LP model, solved via Frank–Wolfe under constraints, and validated on real directed-graph data.</li>
+  </ul>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">二分图的近似最大团问题 / Approximate Maximum Clique in Bipartite Graphs</span>
+    <span class="date">2023.09 – 2024.05</span>
+  </div>
+  <ul>
+    <li>针对二分图中的 defective-clique 问题开展研究，采用 alpha-beta core 缩图与 ordering 技术优化求解，运行时间降低约 10%。</li>
+    <li class="en">Optimized defective-clique solving in bipartite graphs with alpha-beta core compression and ordering, cutting computation time by ~10%.</li>
+  </ul>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-entry-head">
+    <span class="role">北京移动客户体验分析 / Customer-Experience Analytics — MathorCup</span>
+    <span class="date">2023.01</span>
+  </div>
+  <ul>
+    <li>证明标准化数据上 Pearson 相关与欧氏距离的理论等价性，量化 50+ 网络质量变量与满意度的关系并锁定前五大驱动因素。</li>
+    <li>构建并调优 XGBoost（特征交叉 + 正则化），在潜客评分集上达到 85% 预测准确率。</li>
+    <li class="en">Linked 50+ network-quality variables to satisfaction and isolated the top five drivers; tuned XGBoost to 85% prediction accuracy.</li>
+  </ul>
+</div>
+
+<h2>技能 · Skills</h2>
+<div class="cv-entry">
+  <p class="skill-row"><span class="label">编程 / Programming：</span>
+    <span class="badge">Python</span><span class="badge">C++</span><span class="badge">TensorFlow</span><span class="badge">PyTorch</span>
+  </p>
+  <p class="skill-row"><span class="label">算法 / Algorithms：</span>
+    <span class="badge">图论 Graph Theory</span><span class="badge">网络流 Network Flow</span><span class="badge">动态规划 DP</span><span class="badge">推荐算法 Recommender</span>
+  </p>
+  <p class="skill-row"><span class="label">语言 / Language：</span>英语 English（TOEFL 104）</p>
+</div>
+
+<h2>荣誉奖项 · Honors</h2>
+<ul>
+  <li>ACM-ICPC 国际大学生程序设计竞赛 中国区域赛 <strong>铜奖</strong> / Bronze Medal, ACM-ICPC Regional</li>
+  <li>香港中文大学（深圳）算法程序竞赛 <strong>一等奖</strong> / First Prize, CUHK(SZ) Algorithm Contest</li>
+  <li>全国信息学奥林匹克联赛（NOIP）<strong>二等奖</strong> / Second Prize, NOIP</li>
+</ul>

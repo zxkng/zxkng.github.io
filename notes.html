@@ -1,0 +1,25 @@
+---
+layout: default
+title: 笔记 Notes
+permalink: /notes/
+---
+<h1>学习笔记 <span style="color:var(--muted);font-weight:400;font-size:.6em">Notes</span></h1>
+
+<p>算法、机器学习与数学的学习记录，支持 LaTeX 公式渲染。</p>
+
+{% assign notes = site.notes | sort: 'date' | reverse %}
+{% if notes.size > 0 %}
+<ul class="note-list">
+  {% for note in notes %}
+  <li>
+    <span>
+      <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      {% if note.category %}<span class="note-cat-label">{{ note.category }}</span>{% endif %}
+    </span>
+    {% if note.date %}<span class="when">{{ note.date | date: '%Y-%m-%d' }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p style="color:var(--muted)">还没有笔记。在 <code>_notes/</code> 目录下新建 Markdown 文件即可。</p>
+{% endif %}
