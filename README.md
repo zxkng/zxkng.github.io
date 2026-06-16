@@ -1,4 +1,4 @@
-# fishxua.github.io
+# zxkng.github.io
 
 康泽煊 (Zexuan Kang) 的个人主页：简历、研究项目与学习笔记。基于 [Jekyll](https://jekyllrb.com/)，部署在 GitHub Pages，使用 KaTeX 渲染数学公式。
 
@@ -20,15 +20,15 @@ assets/pdf/            简历 PDF
 
 ## 部署到 GitHub Pages
 
-1. 在 GitHub 新建仓库，名字必须是 `fishxua.github.io`。
+1. 在 GitHub 新建仓库，名字必须是 `zxkng.github.io`。
 2. 把本文件夹推送上去：
    ```bash
-   git remote add origin https://github.com/fishxua/fishxua.github.io.git
+   git remote add origin https://github.com/zxkng/zxkng.github.io.git
    git branch -M main
    git push -u origin main
    ```
 3. 仓库 **Settings → Pages → Build and deployment**，Source 选 **Deploy from a branch**，Branch 选 `main` / `/ (root)`，保存。
-4. 等一两分钟，访问 https://fishxua.github.io 。
+4. 等一两分钟，访问 https://zxkng.github.io 。
 
 ## 本地预览（可选）
 

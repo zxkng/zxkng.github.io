@@ -3,13 +3,13 @@ tagline: 大数据与数据科学 · 算法与机器学习
 description: 康泽煊 (Zexuan Kang) 的个人主页 —— 简历、研究项目与学习笔记。
 lang: zh-CN
 
-url: "https://fishxua.github.io"
+url: "https://zxkng.github.io"
 baseurl: ""
 
 author:
   name: 康泽煊 (Zexuan Kang)
   email: 122090234@link.cuhk.edu.cn
-  github: fishxua
+  github: zxkng
 
 # --- Build settings ---
 markdown: kramdown
